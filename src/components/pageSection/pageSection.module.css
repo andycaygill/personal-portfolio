@@ -1,0 +1,25 @@
+.pageSection {
+  background-color: #ffffff;
+  background-image: url(../../assets/images/lines.png),
+    url(../../assets/images/ac-bg.png);
+  background-repeat: repeat, no-repeat;
+  background-position: center, top left;
+  background-size: auto, contain;
+  background-attachment: fixed;
+  padding: 120px 0;
+}
+
+.white {
+  composes: pageSection;
+  background-color: #fff;
+}
+
+.blue {
+  composes: pageSection;
+  background-color: var(--blue);
+}
+
+.black {
+  composes: pageSection;
+  background-color: #000000;
+}

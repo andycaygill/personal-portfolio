@@ -1,0 +1,49 @@
+:root {
+  --blue: #003eff;
+  --red: #fd3946;
+  --green: #00bb87;
+  --yellow: #f8cb00;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+  min-width: 320px;
+}
+
+body {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+a,
+a:visited {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--red);
+}

@@ -1,0 +1,18 @@
+.logo {
+  color: black;
+  display: flex;
+  position: fixed;
+  top: 30px;
+  left: 30px;
+}
+
+.logoImg {
+  margin-right: 10px;
+}
+
+.logoText {
+  text-transform: lowercase;
+  width: 100px;
+  line-height: 1;
+  margin: 0;
+}
