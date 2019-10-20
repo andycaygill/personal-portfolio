@@ -1,13 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
 import Header from "../header"
+import Footer from "../footer"
 
 import "normalize.css/normalize.css"
 import "./index.css"
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
+    const { location, title, theme, children } = this.props
 
     /*
     const rootPath = `${__PATH_PREFIX__}/`
@@ -30,13 +31,9 @@ class Layout extends React.Component {
 
     return (
       <React.Fragment>
-        <Header />
+        <Header theme={theme} />
         {children}
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <Footer theme={theme} />
       </React.Fragment>
     )
   }

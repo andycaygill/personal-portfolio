@@ -1,0 +1,44 @@
+.articleNavigation {
+  grid-column-start: 2;
+  background-color: var(--light-grey);
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.arrowBtn,
+.arrowBtn:visited {
+  font-weight: 900;
+  color: black;
+  margin: 0 -10px;
+}
+
+.arrowBtn:before,
+.arrowBtn:after {
+  background-color: #000000;
+  color: white;
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 200;
+}
+
+.previous {
+  composes: arrowBtn;
+}
+
+.previous:before {
+  content: "←";
+  margin-right: 10px;
+}
+
+.next {
+  composes: arrowBtn;
+}
+
+.next:after {
+  content: "→";
+  margin-left: 10px;
+}

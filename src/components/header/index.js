@@ -4,9 +4,9 @@ import Logo from "..//logo"
 import Navigation from "..//navigation"
 import componentStyles from "./header.module.css"
 
-const Header = () => {
+const Header = props => {
   return (
-    <header className={`site-header ${componentStyles.siteHeader}`}>
+    <header className={`site-header ${componentStyles[props.theme]}`}>
       <Logo />
       <Navigation />
     </header>

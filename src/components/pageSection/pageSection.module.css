@@ -12,14 +12,17 @@
 .white {
   composes: pageSection;
   background-color: #fff;
+  color: black;
 }
 
 .blue {
   composes: pageSection;
   background-color: var(--blue);
+  color: white;
 }
 
 .black {
   composes: pageSection;
   background-color: #000000;
+  color: white;
 }

@@ -1,0 +1,15 @@
+.siteFooter {
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.light {
+  composes: siteFooter;
+  filter: invert();
+}
+
+.dark {
+  composes: siteFooter;
+}
