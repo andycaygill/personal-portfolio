@@ -4,6 +4,8 @@
   display: flex;
   justify-content: space-between;
   padding-top: 30px;
+  display: grid;
+  grid-template-areas: "prev next";
 }
 
 .arrowBtn,
@@ -11,10 +13,16 @@
   font-weight: 900;
   color: black;
   margin: 0 -10px;
+  transition: 0.2s ease;
 }
 
-.arrowBtn:before,
-.arrowBtn:after {
+.arrowBtn:hover {
+  color: var(--blue);
+}
+
+.arrowBtn::before,
+.arrowBtn::after {
+  position: relative;
   background-color: #000000;
   color: white;
   width: 50px;
@@ -23,22 +31,37 @@
   align-items: center;
   justify-content: center;
   font-weight: 200;
+  transition: 0.2s ease;
 }
 
 .previous {
   composes: arrowBtn;
+  grid-area: prev;
 }
 
-.previous:before {
+.previous::before {
   content: "←";
   margin-right: 10px;
+  left: 0;
+}
+
+.previous:hover::before {
+  left: -5px;
+  background-color: var(--blue);
 }
 
 .next {
   composes: arrowBtn;
+  grid-area: next;
 }
 
-.next:after {
+.next::after {
   content: "→";
   margin-left: 10px;
+  right: 0;
+}
+
+.next:hover::after {
+  right: -5px;
+  background-color: var(--blue);
 }
