@@ -1,0 +1,12 @@
+.articleListItem {
+  max-width: 300px;
+  margin-bottom: 50px;
+}
+
+.articleListItem:nth-child(2n) {
+  margin-left: 100px;
+}
+
+.articleListItem:nth-child(3n) {
+  margin-left: 50px;
+}

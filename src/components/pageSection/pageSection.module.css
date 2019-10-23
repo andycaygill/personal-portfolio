@@ -19,14 +19,41 @@
   color: black;
 }
 
+.white a,
+.white a:visited {
+  color: var(--blue);
+}
+
+.white a:hover {
+  color: var(--red);
+}
+
 .blue {
   composes: pageSection;
   background-color: var(--blue);
   color: white;
 }
 
+.blue a,
+.blue a:visited {
+  color: #ffffff;
+}
+
+.blue a:hover {
+  color: var(--red);
+}
+
 .black {
   composes: pageSection;
   background-color: #000000;
   color: white;
+}
+
+.black a,
+.black a:visited {
+  color: #ffffff;
+}
+
+.black a:hover {
+  color: var(--red);
 }

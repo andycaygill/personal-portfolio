@@ -1,0 +1,7 @@
+.outlineButton {
+  padding: 10px 20px;
+  display: inline-block;
+  border: 4px solid;
+  font-weight: 900;
+  transition: all 0.2s ease;
+}

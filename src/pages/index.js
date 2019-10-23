@@ -6,6 +6,7 @@ import PageSection from "../components/pageSection"
 import LatestArticles from "../components/latestArticles"
 import IndentedTextBlock from "../components/indentedTextBlock"
 import Grid from "../components/grid"
+import OutlineButton from "../components/outlineButton"
 import ACImage from "../assets/images/ac-image.png"
 import SEO from "../components/seo"
 
@@ -65,10 +66,13 @@ class Index extends React.Component {
         <PageSection colour="blue">
           <Grid>
             <IndentedTextBlock heading="Latest Articles">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit,
-              ipsum nostrum? Magni possimus deserunt maiores in eum! Ex corporis
-              iusto quam nostrum dolores animi quos doloribus porro deleniti
-              facere. Cum?
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+                ipsum nostrum? Magni possimus deserunt maiores in eum! Ex
+                corporis iusto quam nostrum dolores animi quos doloribus porro
+                deleniti facere. Cum?
+              </p>
+              <OutlineButton url="/blog">view all posts</OutlineButton>
             </IndentedTextBlock>
             <LatestArticles posts={posts} limit={3} />
           </Grid>

@@ -10,7 +10,10 @@ const LatestArticles = props => {
       {props.posts.slice(0, props.limit).map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
-          <article key={node.fields.slug}>
+          <article
+            className={componentStyles.articleListItem}
+            key={node.fields.slug}
+          >
             <Card url={node.fields.slug}>
               <h3>
                 <Link to={node.fields.slug}>{title}</Link>
