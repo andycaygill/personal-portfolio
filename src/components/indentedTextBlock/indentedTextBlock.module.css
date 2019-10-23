@@ -3,5 +3,11 @@
 }
 
 .content {
-  padding: 0 0 0 40px;
+  margin: 0 0 20px 0;
+}
+
+@media (min-width: 768px) {
+  .content {
+    padding: 0 0 0 40px;
+  }
 }

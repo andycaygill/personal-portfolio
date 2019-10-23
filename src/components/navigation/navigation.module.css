@@ -1,4 +1,5 @@
 .navigation {
+  display: none;
   list-style: none;
   margin: 0;
 }
@@ -16,4 +17,10 @@
 
 .navigationItem a:hover {
   text-decoration: underline;
+}
+
+@media (min-width: 600px) {
+  .navigation {
+    display: block;
+  }
 }

@@ -1,12 +1,17 @@
 .articleListItem {
-  max-width: 300px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
-.articleListItem:nth-child(2n) {
-  margin-left: 100px;
-}
+@media (min-width: 768px) {
+  .articleListItem {
+    max-width: 300px;
+    margin-bottom: 50px;
+  }
+  .articleListItem:nth-child(2n) {
+    margin-left: 100px;
+  }
 
-.articleListItem:nth-child(3n) {
-  margin-left: 50px;
+  .articleListItem:nth-child(3n) {
+    margin-left: 50px;
+  }
 }

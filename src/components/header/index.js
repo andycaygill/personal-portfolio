@@ -6,7 +6,7 @@ import componentStyles from "./header.module.css"
 
 const Header = props => {
   return (
-    <header className={`site-header ${componentStyles.siteHeader}`}>
+    <header className={componentStyles.siteHeader}>
       <Logo theme={props.theme} />
       <Navigation theme={props.theme} />
     </header>

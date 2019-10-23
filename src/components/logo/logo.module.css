@@ -1,9 +1,8 @@
 .logo {
   color: black;
   display: flex;
-  position: fixed;
-  top: 30px;
-  left: 30px;
+  align-items: center;
+  justify-content: center;
 }
 
 .logoImg {
@@ -12,7 +11,18 @@
 
 .logoText {
   text-transform: lowercase;
-  width: 100px;
   line-height: 1;
   margin: 0;
+}
+
+@media (min-width: 600px) {
+  .logoText {
+    width: 100px;
+  }
+
+  .logo {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+  }
 }
