@@ -1,8 +1,8 @@
 .siteFooter {
   color: white;
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
+  background-color: var(--dark-blue);
+  padding: 15px 20px;
+  font-size: 1.5rem;
 }
 
 .light {

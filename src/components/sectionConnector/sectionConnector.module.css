@@ -1,0 +1,61 @@
+.sectionConnector {
+  position: absolute;
+  bottom: 0px;
+  color: #ffffff;
+  z-index: 99999;
+  font-weight: 900;
+  font-size: 2.4rem;
+  height: 70px;
+}
+
+@media (min-width: 768px) {
+  .sectionConnector {
+    height: 150px;
+  }
+}
+
+.sectionConnector::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  margin-right: 30px;
+  display: inline-block;
+}
+.sectionConnector::after {
+  content: "";
+  width: 4px;
+  height: calc(100% - 16px);
+  background-color: #ffffff;
+  position: absolute;
+  left: 6px;
+  bottom: 0;
+}
+
+.white {
+  composes: sectionConnector;
+  color: #ffffff;
+}
+.white::before,
+.white::after {
+  background-color: #ffffff;
+}
+
+.black {
+  composes: sectionConnector;
+  color: #000000;
+}
+.black::before,
+.black::after {
+  background-color: #000000;
+}
+
+.blue {
+  composes: sectionConnector;
+  color: var(--blue);
+}
+.blue::before,
+.blue::after {
+  background-color: var(--blue);
+}

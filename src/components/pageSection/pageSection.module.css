@@ -4,13 +4,20 @@
     url(../../assets/images/ac-bg.png);
   background-repeat: repeat, no-repeat;
   background-position: center, top left;
-  background-size: auto, contain;
+  background-size: auto, cover;
   background-attachment: fixed;
-  padding: 120px 0;
-  min-height: 100vh;
+  padding: 80px 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .pageSection {
+    min-height: 100vh;
+    background-size: auto, contain;
+  }
 }
 
 .white {
@@ -21,7 +28,7 @@
 
 .white a,
 .white a:visited {
-  color: var(--blue);
+  color: #000000;
 }
 
 .white a:hover {

@@ -7,7 +7,13 @@ import LatestArticles from "../components/latestArticles"
 import IndentedTextBlock from "../components/indentedTextBlock"
 import Grid from "../components/grid"
 import OutlineButton from "../components/outlineButton"
+import PortfolioItem from "../components/portfolioItem"
+import SectionConnector from "../components/sectionConnector"
+
 import ACImage from "../assets/images/ac-image.png"
+import ScrollEntranceImage from "../assets/images/scroll-entrance-screenshot.png"
+import EtchThemesImage from "../assets/images/etch-themes-screenshot.png"
+import GuitarTunerImage from "../assets/images/guitar-tuner-screenshot.png"
 import SEO from "../components/seo"
 
 class Index extends React.Component {
@@ -27,17 +33,70 @@ class Index extends React.Component {
               specialise in ultrices ornare purus semper.
             </IndentedTextBlock>
           </Grid>
+          <SectionConnector label="projects" colour="white" />
         </PageSection>
         <PageSection colour="white">
-          <Grid>
-            <div>image</div>
-            <IndentedTextBlock heading="Portfolio Item 1">
+          <PortfolioItem
+            heading="Scroll Entrance Plugin"
+            url="#"
+            theme="green"
+            image={ScrollEntranceImage}
+          >
+            <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit,
               ipsum nostrum? Magni possimus deserunt maiores in eum! Ex corporis
               iusto quam nostrum dolores animi quos doloribus porro deleniti
               facere. Cum?
-            </IndentedTextBlock>
-          </Grid>
+            </p>
+          </PortfolioItem>
+        </PageSection>
+        <PageSection colour="white">
+          <PortfolioItem
+            heading="Etch Themes"
+            url="#"
+            theme="red"
+            image={EtchThemesImage}
+            layout="reversed"
+          >
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+              ipsum nostrum? Magni possimus deserunt maiores in eum! Ex corporis
+              iusto quam nostrum dolores animi quos doloribus porro deleniti
+              facere. Cum?
+            </p>
+          </PortfolioItem>
+        </PageSection>
+        <PageSection colour="white">
+          <PortfolioItem
+            heading="Guitar Tuner"
+            url="#"
+            theme="yellow"
+            image={GuitarTunerImage}
+          >
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+              ipsum nostrum? Magni possimus deserunt maiores in eum! Ex corporis
+              iusto quam nostrum dolores animi quos doloribus porro deleniti
+              facere. Cum?
+            </p>
+          </PortfolioItem>
+        </PageSection>
+        <PageSection colour="white">
+          <PortfolioItem
+            heading="Andertons Style Guide"
+            url="#"
+            theme="blue"
+            image={GuitarTunerImage}
+            layout="reversed"
+          >
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+              ipsum nostrum? Magni possimus deserunt maiores in eum! Ex corporis
+              iusto quam nostrum dolores animi quos doloribus porro deleniti
+              facere. Cum?
+            </p>
+          </PortfolioItem>
+          <SectionConnector label="about" colour="black" />
         </PageSection>
         <PageSection colour="black">
           <Grid>
@@ -62,6 +121,7 @@ class Index extends React.Component {
               </p>
             </IndentedTextBlock>
           </Grid>
+          <SectionConnector label="latest articles" colour="blue" />
         </PageSection>
         <PageSection colour="blue">
           <Grid>
