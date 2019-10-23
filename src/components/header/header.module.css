@@ -7,12 +7,3 @@
   display: flex;
   justify-content: flex-end;
 }
-
-.dark {
-  composes: siteHeader;
-}
-
-.light {
-  composes: siteHeader;
-  filter: invert();
-}

@@ -8,6 +8,9 @@
   background-attachment: fixed;
   padding: 120px 0;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .white {
