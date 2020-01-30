@@ -57,3 +57,52 @@ a:hover {
 img {
   max-width: 100%;
 }
+
+/*
+  Animations
+*/
+
+@keyframes fade-in-from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.fade-in-from-left {
+  animation: fade-in-from-left 1s forwards;
+}
+
+@keyframes fade-in-from-right {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.fade-in-from-right {
+  animation: fade-in-from-right 1s forwards;
+}
+
+@keyframes fade-in-from-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.fade-in-from-bottom {
+  animation: fade-in-from-bottom 1s forwards;
+}

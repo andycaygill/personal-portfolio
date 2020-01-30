@@ -24,5 +24,15 @@
     position: fixed;
     top: 30px;
     left: 30px;
+    transition: all 0.3s ease;
+  }
+
+  .light {
+    composes: logo;
+    filter: invert();
+  }
+
+  .dark {
+    composes: logo;
   }
 }

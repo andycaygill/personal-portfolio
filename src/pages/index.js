@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
@@ -9,103 +9,124 @@ import Grid from "../components/grid"
 import OutlineButton from "../components/outlineButton"
 import PortfolioItem from "../components/portfolioItem"
 import SectionConnector from "../components/sectionConnector"
+import ScrollAnimation from "react-animate-on-scroll"
 
 import ACImage from "../assets/images/ac-image.png"
 import ScrollEntranceImage from "../assets/images/scroll-entrance-screenshot.png"
+import ApplioImage from "../assets/images/applio-screenshot.png"
 import EtchThemesImage from "../assets/images/etch-themes-screenshot.png"
 import GuitarTunerImage from "../assets/images/guitar-tuner-screenshot.png"
 import SEO from "../components/seo"
 
-class Index extends React.Component {
-  render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
+const Index = props => {
+  //render() {
+  const { data } = props
+  const [theme, setTheme] = useState("dark")
+  const siteTitle = data.site.siteMetadata.title
+  const posts = data.allMarkdownRemark.edges
 
-    return (
-      <Layout location={this.props.location} title={siteTitle} theme="light">
-        <SEO title="All posts" />
-        <PageSection colour="blue">
-          <Grid>
+  const updateTheme = (visible, theme) => {
+    setTheme("light")
+  }
+
+  return (
+    <Layout location={props.location} title={siteTitle} theme={theme}>
+      <SEO title="All posts" />
+      <PageSection colour="blue">
+        <Grid>
+          <ScrollAnimation animateIn="fade-in-from-left" animateOnce="true">
             <img src={ACImage} alt="AC" />
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="fade-in-from-right" animateOnce="true">
             <IndentedTextBlock heading="Hi, I'm Andrew Caygill. Nice to meet you!">
               I’m a Front End Developer from England living in Vancouver, BC. I
               specialise in ultrices ornare purus semper.
             </IndentedTextBlock>
-          </Grid>
-          <SectionConnector label="projects" colour="white" />
-        </PageSection>
-        <PageSection colour="white">
-          <PortfolioItem
-            heading="Scroll Entrance Plugin"
-            url="#"
-            theme="green"
-            image={ScrollEntranceImage}
-          >
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit,
-              ipsum nostrum? Magni possimus deserunt maiores in eum! Ex corporis
-              iusto quam nostrum dolores animi quos doloribus porro deleniti
-              facere. Cum?
-            </p>
-          </PortfolioItem>
-        </PageSection>
-        <PageSection colour="white">
-          <PortfolioItem
-            heading="Etch Themes"
-            url="#"
-            theme="red"
-            image={EtchThemesImage}
-            layout="reversed"
-          >
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit,
-              ipsum nostrum? Magni possimus deserunt maiores in eum! Ex corporis
-              iusto quam nostrum dolores animi quos doloribus porro deleniti
-              facere. Cum?
-            </p>
-          </PortfolioItem>
-        </PageSection>
-        <PageSection colour="white">
-          <PortfolioItem
-            heading="Guitar Tuner"
-            url="#"
-            theme="yellow"
-            image={GuitarTunerImage}
-          >
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit,
-              ipsum nostrum? Magni possimus deserunt maiores in eum! Ex corporis
-              iusto quam nostrum dolores animi quos doloribus porro deleniti
-              facere. Cum?
-            </p>
-          </PortfolioItem>
-        </PageSection>
-        <PageSection colour="white">
-          <PortfolioItem
-            heading="Andertons Style Guide"
-            url="#"
-            theme="blue"
-            image={GuitarTunerImage}
-            layout="reversed"
-          >
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit,
-              ipsum nostrum? Magni possimus deserunt maiores in eum! Ex corporis
-              iusto quam nostrum dolores animi quos doloribus porro deleniti
-              facere. Cum?
-            </p>
-          </PortfolioItem>
-          <SectionConnector label="about" colour="black" />
-        </PageSection>
-        <PageSection colour="black">
+          </ScrollAnimation>
+        </Grid>
+        <SectionConnector label="projects" colour="white" />
+      </PageSection>
+      <PageSection colour="white">
+        <PortfolioItem
+          heading="Applio"
+          url="https://applio.co"
+          theme="blue"
+          image={ApplioImage}
+        >
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+            ipsum nostrum? Magni possimus deserunt maiores in eum! Ex corporis
+            iusto quam nostrum dolores animi quos doloribus porro deleniti
+            facere. Cum?
+          </p>
+        </PortfolioItem>
+      </PageSection>
+      <PageSection colour="white">
+        <PortfolioItem
+          heading="Scroll Entrance Plugin"
+          url="#"
+          theme="green"
+          image={ScrollEntranceImage}
+          layout="reversed"
+        >
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+            ipsum nostrum? Magni possimus deserunt maiores in eum! Ex corporis
+            iusto quam nostrum dolores animi quos doloribus porro deleniti
+            facere. Cum?
+          </p>
+        </PortfolioItem>
+      </PageSection>
+      <PageSection colour="white">
+        <PortfolioItem
+          heading="Etch Themes"
+          url="#"
+          theme="red"
+          image={EtchThemesImage}
+        >
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+            ipsum nostrum? Magni possimus deserunt maiores in eum! Ex corporis
+            iusto quam nostrum dolores animi quos doloribus porro deleniti
+            facere. Cum?
+          </p>
+        </PortfolioItem>
+      </PageSection>
+      <PageSection colour="white">
+        <PortfolioItem
+          heading="Guitar Tuner"
+          url="#"
+          theme="yellow"
+          image={GuitarTunerImage}
+          layout="reversed"
+        >
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+            ipsum nostrum? Magni possimus deserunt maiores in eum! Ex corporis
+            iusto quam nostrum dolores animi quos doloribus porro deleniti
+            facere. Cum?
+          </p>
+        </PortfolioItem>
+      </PageSection>
+      <PageSection colour="black">
+        <ScrollAnimation
+          animateIn="fade-in-from-bottom"
+          afterAnimatedIn={() => {
+            setTheme("light")
+          }}
+          afterAnimatedOut={() => {
+            setTheme("dark")
+          }}
+        >
+          {/* <ScrollAnimation afterAnimatedOut={setTheme("light")}> */}
           <Grid>
             <div>Icons</div>
+
             <IndentedTextBlock heading="More than just a developer...">
               <p>
-                I'm a keen front-end developer with 10 years professional
-                experience in building efficient, scalable web applications and
-                beautiful user experiences. While I enjoy experimenting with new
+                I'm a front-end developer with 10 years professional experience
+                in building efficient, scalable web applications and beautiful
+                user experiences. While I enjoy experimenting with new
                 frameworks and libraries, I understand the importance of placing
                 focus on the end goal: delivering a beautiful, functional
                 product to the user/client.
@@ -121,10 +142,13 @@ class Index extends React.Component {
               </p>
             </IndentedTextBlock>
           </Grid>
-          <SectionConnector label="latest articles" colour="blue" />
-        </PageSection>
-        <PageSection colour="blue">
-          <Grid>
+        </ScrollAnimation>
+        {/* </ScrollAnimation> */}
+        <SectionConnector label="latest articles" colour="blue" />
+      </PageSection>
+      <PageSection colour="blue">
+        <Grid>
+          <ScrollAnimation animateIn="fade-in-from-bottom" animateOnce="true">
             <IndentedTextBlock heading="Latest Articles">
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit,
@@ -134,12 +158,13 @@ class Index extends React.Component {
               </p>
               <OutlineButton url="/blog">view all posts</OutlineButton>
             </IndentedTextBlock>
-            <LatestArticles posts={posts} limit={3} />
-          </Grid>
-        </PageSection>
-      </Layout>
-    )
-  }
+          </ScrollAnimation>
+          <LatestArticles posts={posts} limit={3} />
+        </Grid>
+      </PageSection>
+    </Layout>
+  )
+  //}
 }
 
 export default Index

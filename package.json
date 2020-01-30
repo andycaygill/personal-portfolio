@@ -28,8 +28,10 @@
     "normalize.css": "^8.0.1",
     "prismjs": "^1.17.1",
     "react": "^16.10.2",
+    "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.10.2",
     "react-helmet": "^5.2.1",
+    "react-intersection-observer": "^8.25.1",
     "react-typography": "^0.16.19",
     "typeface-montserrat": "0.0.75",
     "typography": "^0.16.19"
