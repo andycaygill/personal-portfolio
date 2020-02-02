@@ -44,4 +44,24 @@
     composes: thumbnail;
     background-color: var(--blue);
   }
+
+  .lightBlueThumbnail {
+    composes: thumbnail;
+    background-color: var(--light-blue);
+  }
+
+  .darkGreenThumbnail {
+    composes: thumbnail;
+    background-color: var(--dark-green);
+  }
+
+  .tipThumbnail {
+    composes: thumbnail;
+    background-color: #1f6aa4;
+  }
+
+  .etchThumbnail {
+    composes: thumbnail;
+    background-color: #4934ff;
+  }
 }

@@ -1,5 +1,5 @@
 .logo {
-  color: black;
+  color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,6 +13,16 @@
   text-transform: lowercase;
   line-height: 1;
   margin: 0;
+  font-size: 2rem;
+}
+
+.light {
+  composes: logo;
+  filter: invert();
+}
+
+.dark {
+  composes: logo;
 }
 
 @media (min-width: 600px) {
@@ -21,18 +31,9 @@
   }
 
   .logo {
-    position: fixed;
+    position: absolute;
     top: 30px;
     left: 30px;
     transition: all 0.3s ease;
-  }
-
-  .light {
-    composes: logo;
-    filter: invert();
-  }
-
-  .dark {
-    composes: logo;
   }
 }

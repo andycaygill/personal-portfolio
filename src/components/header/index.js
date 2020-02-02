@@ -8,7 +8,7 @@ const Header = props => {
   return (
     <header className={`site-header ${componentStyles.siteHeader}`}>
       <Logo theme={props.theme} />
-      <Navigation theme={props.theme} />
+      {/* <Navigation theme={props.theme} /> */}
     </header>
   )
 }

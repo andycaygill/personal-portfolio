@@ -28,7 +28,7 @@ const PortfolioItem = props => {
             heading={props.heading}
           >
             {props.children}
-            <OutlineButton url={props.url}>View Project</OutlineButton>
+            <OutlineButton url={props.url}>View project</OutlineButton>
           </IndentedTextBlock>
         </ScrollAnimation>
       </Grid>
@@ -36,10 +36,4 @@ const PortfolioItem = props => {
   )
 }
 
-/*
-ArticleList.propTypes = {
-  previous: PropTypes.object,
-  next: PropTypes.object,
-}
-*/
 export default PortfolioItem

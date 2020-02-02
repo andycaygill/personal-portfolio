@@ -5,6 +5,8 @@
   --yellow: #f8cb00;
   --light-grey: #ebeef2;
   --dark-blue: #0036dd;
+  --light-blue: #3fc6f3;
+  --dark-green: #148991;
 }
 
 html {
@@ -23,7 +25,7 @@ html {
 }
 
 body {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 300;
   line-height: 1.6;
 }
