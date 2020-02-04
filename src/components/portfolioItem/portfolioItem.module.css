@@ -17,7 +17,8 @@
     justify-content: flex-end;
   }
   .thumbnailImg {
-    margin-right: -130px;
+    margin-right: -180px;
+    max-width: 130%;
   }
 
   .reversed {
