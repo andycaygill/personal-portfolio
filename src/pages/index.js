@@ -6,6 +6,7 @@ import PageSection from "../components/pageSection"
 import IndentedTextBlock from "../components/indentedTextBlock"
 import Grid from "../components/grid"
 import PortfolioItem from "../components/portfolioItem"
+import Profile from "../components/profile"
 import SectionConnector from "../components/sectionConnector"
 import ScrollAnimation from "react-animate-on-scroll"
 
@@ -15,7 +16,6 @@ import ApplioImage from "../assets/images/applio-screenshot.png"
 import EtchThemesImage from "../assets/images/etch-themes-screenshot.png"
 import TipImage from "../assets/images/tip-screenshot.png"
 import GuitarTunerImage from "../assets/images/guitar-tuner-screenshot.png"
-import ProfileImage from "../assets/images/profile-picture.jpg"
 import SEO from "../components/seo"
 
 //import LatestArticles from "../components/latestArticles"
@@ -155,32 +155,14 @@ const Index = props => {
 
       <PageSection colour="black">
         <ScrollAnimation animateIn="fade-in-from-bottom">
-          <Grid>
-            <img src={ProfileImage} alt="Profile Picture" />
-
-            <IndentedTextBlock heading="About me">
-              <p>
-                I'm a front-end engineer with 8 years professional experience in
-                building efficient, scalable web applications and creative user
-                experiences. While I enjoy experimenting with new frameworks and
-                libraries, I understand the importance of placing focus on the
-                end goal: delivering a beautiful, functional product to the user
-                and client. For work enquiries or if you just want to say hello,
-                email me today at{" "}
-                <a href="mailto:hello@andrewcaygill.com">
-                  hello@andrewcaygill.com
-                </a>
-                .
-              </p>
-            </IndentedTextBlock>
-          </Grid>
+          <Profile />
         </ScrollAnimation>
         {/* <SectionConnector label="latest articles" colour="blue" /> */}
       </PageSection>
 
       {/* <PageSection colour="blue">
         <Grid>
-          <ScrollAnimation animateIn="fade-in-from-bottom" animateOnce="true">
+          <ScrollAnimation animateIn="fade-in-from-bottom" animateOnce={true}>
             <IndentedTextBlock heading="Latest Articles">
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit,
