@@ -49,11 +49,11 @@ h3 {
 a,
 a:visited {
   color: var(--blue);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:hover {
-  color: var(--red);
+  color: var(--blue);
 }
 
 img {

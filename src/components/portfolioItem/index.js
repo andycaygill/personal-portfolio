@@ -1,6 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
 import IndentedTextBlock from "../indentedTextBlock"
 import Grid from "../grid"
 import OutlineButton from "../outlineButton"
@@ -28,12 +26,22 @@ const PortfolioItem = props => {
             heading={props.heading}
           >
             {props.children}
-            <OutlineButton url={props.url}>View project</OutlineButton>
+            <OutlineButton url={props.url}>{props.buttonText}</OutlineButton>
           </IndentedTextBlock>
         </ScrollAnimation>
       </Grid>
     </div>
   )
+}
+
+/*
+PortfolioItem.propTypes = {
+  buttonText: PropTypes.string,
+}
+*/
+
+PortfolioItem.defaultProps = {
+  buttonText: "View project",
 }
 
 export default PortfolioItem

@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import PageSection from "../components/pageSection"
@@ -26,6 +26,7 @@ const Index = props => {
   const { data } = props
   const [theme, setTheme] = useState("light")
   const siteTitle = data.site.siteMetadata.title
+
   const posts = data.allMarkdownRemark.edges
 
   return (
@@ -118,7 +119,7 @@ const Index = props => {
       <PageSection colour="white">
         <PortfolioItem
           heading="Etch Themes"
-          url="#"
+          buttonText="Coming soon"
           theme="etch"
           image={EtchThemesImage}
         >

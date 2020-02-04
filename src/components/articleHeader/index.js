@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import componentStyles from "./articleHeader.module.css"
 
 const ArticleHeader = props => {
   return (
